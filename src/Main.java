@@ -2,22 +2,38 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        UEFACommissioner member = new UEFACommissioner("진행요원");
-        UEFACommissioner commissioner = new UEFACommissioner("프란체스코 토티");
+        SetDataForDraw sdfd = new SetDataForDraw();
+        Scanner scan = new Scanner(System.in);
 
-        member.dividePort();
-        member.setShuffle();
+        System.out.println("23/24 Season UEFA Champions League Draw ");
+        System.out.println();
+        sdfd.setList();
+        sdfd.setShuffle();
 
-        commissioner.drawPort1();
-//        commissioner.drawPort2();
-//        commissioner.drawPort3();
-//        commissioner.drawPort4();
+        System.out.println("조 추첨을 시작합니다.");
+        System.out.println("각 포트 순서로 추첨을 진행합니다. ==> " + scan.nextLine());
+       
+        String y = scan.nextLine();
+        sdfd.drawPort1(y);
 
-//        member.showResult();
+
+        // y = scan.nextLine();
+        // sdfd.drawPort2(y);
+        
+        // y = scan.nextLine();
+        // sdfd.drawPort3(y);
+        
+        // y = scan.nextLine();
+        // sdfd.drawPort4(y);
+
+
+
+        sdfd.showResult();
 
     }
 }
