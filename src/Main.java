@@ -21,6 +21,7 @@ public class Main {
         String y = scan.nextLine();
         sdfd.drawPort1(y);
 
+        System.out.println("커밋 테스트1");
 
         // y = scan.nextLine();
         // sdfd.drawPort2(y);
